@@ -126,14 +126,12 @@ function motorOn() {
 	a = -g;
 	if (timerFuel === null)
 		timerFuel = setInterval(function () { actualizarAltura(); }, 10);
-	// document.getElementById("nave").style.backgroundImage = "url('../img/cohetesp.png')";
 	document.getElementById("nave").style.backgroundPosition = "-72px 0px";
 }
 function motorOff() {
 	a = g;
 	clearInterval(timerFuel);
 	timerFuel = null;
-	// document.getElementById("nave").style.backgroundImage = "url('../img/cohetesp.png')";
 	document.getElementById("nave").style.backgroundPosition = "0px 0px";
 }
 
