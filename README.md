@@ -36,7 +36,15 @@ TO-DO:
 
 
 
-# Proyecto Lunar Landing parte 1ra correspondiente a la tarea del tema 2 de LMSGI.
+# Proyecto Lunar Landing parte 2 "JavaScript" correspondiente al tema 2 de LMSGI.
+
+En este proyecto he decidido cambiar varios aspectos del trabajo anterior, incluido parte del HTML para que fuese funcional con JavaScript.
+
+También he modificado los iconos para hacerlos mas esteticamente atractivos y he cambiado la visualización del menú y del panel de instrumentos en el modo movil, de modo que ahora el menú se muestra oculto y solo es visualizable haciendo clic en el icono de la nave.
+
+En cambio los paneles ya no tienen iconos, en vez he creado un efecto de indicadores en forma de barra que crecen o reducen su tamaño en función de los valores del panel.
+
+
 
 Para crear el trabajo he usado los siguientes recursos he imagenes:
 
@@ -45,9 +53,7 @@ Para crear el trabajo he usado los siguientes recursos he imagenes:
 
 En cuanto al resto de imagenes son de creación propia utilizando *Adobe illustrator*.
 
-* Quisiera explicar que también que la carpeta `img\borradores` es simplemente un carpeta donde guardo las imagenes fuente u otras que he estado modificando pero que no se muestran en el proyecto final.
-
-* Para el modo movil index-mob.html he usado un icono de hamburguesa obtenido de [Wikipedia](https://en.wikipedia.org/wiki/Hamburger_button#/media/File:Hamburger_icon.svg)
+* Quisiera explicar que también que la carpeta `img\drafts` guardan los borradores originales de las imagenes que he creado.
 
 ## Uso de Sprites
 ---

@@ -66,16 +66,16 @@ function moverNave() {
 		document.getElementsByClassName("height")[0].childNodes[3].style.height = Math.round(y) + "%";
 	}
 		
-	if (y > 0) { // alturas minimas y máximas
+	if (y > 0) { // altura minima
 		document.getElementById("nave").style.bottom = y + "%";
-		if (y > 100) {
+		if (y > 100) { // altura máxima
 			stop();
 			alert(":( NO HAS CUMPLIDO LA MISION..\nHAZ CLICK EN LA PANTALLA PARA VOLVER A INICIAR");
 			document.onclick = function() { window.location.reload(); }
 		}
 	} else {
 		stop();
-		if (v < -2 || v > 2) {  //valor humbral he elegido 2 mt/s porque es de una dificultad intermedia
+		if (v < -3 || v > 3) {  //valor humbral he elegido 3 mt/s porque es de una dificultad intermedia
 			document.onkeydown = null;
 			document.onkeyup = null;
 			shipExplode();
