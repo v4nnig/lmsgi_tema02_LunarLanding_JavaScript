@@ -88,6 +88,11 @@ section a {
     color: rgb(244, 214, 176);
 }
 
+.leyenda {
+    color: yellow;
+    font-size: 0.7em;
+}
+
 #howto li {
     text-align: left;
     padding: 10px;
@@ -185,7 +190,7 @@ figure #sombra {
         background-color: black;
         border: 1px solid white;
     }
-    section #pages {
+    section#pages {
         z-index: 200;
         width: 100%;
         height: 100%;
@@ -199,7 +204,6 @@ figure #sombra {
         height: 800px;
         padding: 10px;
         text-align: justify;
-        
         background-color: black;
     }
     #hidem,
@@ -341,7 +345,7 @@ figure #sombra {
         border: 1px solid white;
     }
 
-    section #pages {
+    section#pages {
         z-index: 200;
         width: 100%;
         height: 100%;
