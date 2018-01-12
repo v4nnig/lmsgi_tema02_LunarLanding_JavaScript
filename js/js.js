@@ -6,7 +6,11 @@ var dt = 0.016683;
 var timer = null;
 var timerFuel = null;
 var fuel = 100;
-
+var begin = false;
+var difficulty = null;
+var easy = 6;
+var mid = 4;
+var hard = 2;
 //al cargar por completo la página...
 window.onload = function () {
 	//definición de eventos
@@ -15,6 +19,7 @@ window.onload = function () {
 	document.getElementById("showm").onclick = function () {
 		document.getElementsByClassName("menu")[0].style.display = "block";
 		stop();
+		document.getElementById("iniciar").style.display = "none";
 	}
 	//ocultar menú móvil
 	document.getElementById("hidem").onclick = function () {
@@ -22,31 +27,58 @@ window.onload = function () {
 		start();
 	}
 
-	//encender/apagar el motor al hacer click en la pantalla
+	document.getElementById("iniciar").onclick = function () {
+		var op = document.forms[0];
+		var i;
 
-	document.onclick = function () {
-		if (a == g) {
-			motorOn();
-		} else {
-			motorOff();
+		for (i = 0; i < op.length; i++) {
+			if (op[i].checked) {
+				difficulty = i;
+			}
+		}
+		if (difficulty != null) {
+			alert("Ha seleccionado el nivel " + op[difficulty].value);
+			document.getElementById("iniciar").style.display = "none";
+
+			switch (difficulty) {
+				case 0:
+					difficulty = easy;
+					break;
+				case 1:
+					difficulty = mid;
+					break;
+				case 2:
+					difficulty = hard;
+					break;
+			}
+			document.onclick = function () {
+				if (a == g) {
+					motorOn();
+				} else {
+					motorOff();
+				}
+			}
+			//encender/apagar al apretar/soltar una tecla
+			document.onkeydown = motorOn;
+			document.onkeyup = motorOff;
+
+			//Empezar a mover nave
+			start(difficulty);
+
 		}
 	}
-	//encender/apagar al apretar/soltar una tecla
-	document.onkeydown = motorOn;
-	document.onkeyup = motorOff;
 
-	//Empezar a mover nave
-	start();
 }
 
+
 // Definición de funciones
-function start() {
-	timer = setInterval(function () { moverNave(); }, dt * 1000);
+function start(refVarGlobal) {
+	timer = setInterval(function () { moverNave(refVarGlobal); }, dt * 1000);
 }
 function stop() {
 	clearInterval(timer);
 }
-function moverNave() {
+function moverNave(refVarGlobal) {
 	v -= a * dt;
 	document.getElementsByClassName("speed")[0].childNodes[3].innerHTML = Math.round(v) < 0 ? Math.round(v) * -1 : Math.round(v);
 	if (window.matchMedia("(min-width: 600px)").matches) {
@@ -60,30 +92,33 @@ function moverNave() {
 	y += v * dt;
 	document.getElementsByClassName("height")[0].childNodes[3].innerHTML = Math.round(y);	//mover hasta que top sea un 70% de la pantalla
 	if (window.matchMedia("(min-width: 600px)").matches) {
-		document.getElementsByClassName("height")[0].childNodes[3].style.width = Math.round(y) + "%";	
+		document.getElementsByClassName("height")[0].childNodes[3].style.width = Math.round(y) + "%";
 	} else {
 		document.getElementsByClassName("height")[0].childNodes[3].style.width = 100 + "%";
 		document.getElementsByClassName("height")[0].childNodes[3].style.height = Math.round(y) + "%";
 	}
-		
+
 	if (y > 0) { // altura minima
 		document.getElementById("nave").style.bottom = y + "%";
 		if (y > 100) { // altura máxima
 			stop();
 			alert(":( NO HAS CUMPLIDO LA MISION..\nHAZ CLICK EN LA PANTALLA PARA VOLVER A INICIAR");
-			document.onclick = function() { window.location.reload(); }
+			document.onclick = function () { window.location.reload(); }
 		}
 	} else {
 		stop();
-		if (v < -3 || v > 3) {  //valor humbral he elegido 3 mt/s porque es de una dificultad intermedia
+		
+		if (v < -refVarGlobal || v > refVarGlobal) {  //valor humbral he elegido 3 mt/s porque es de una dificultad intermedia
+			motorOff();
 			document.onkeydown = null;
 			document.onkeyup = null;
 			shipExplode();
 		} else {
+			motorOff();
 			document.onkeydown = null;
 			document.onkeyup = null;
 			alert(":) FELICIDADES HAZ ATERRIZADO A SALVO!!!\nHAZ CLICK EN LA PANTALLA PARA REINICIAR...");
-			document.onclick = function() { window.location.reload(); }
+			document.onclick = function () { window.location.reload(); }
 		}
 	}
 }
@@ -122,11 +157,10 @@ function actualizarAltura() {
 }
 
 function shipExplode() {
-
 	// document.getElementById("nave").style.backgroundImage = "url('../img/cohetesp.png')";
 	document.getElementById("nave").style.backgroundPosition = "-144px 0px";
-	setTimeout(function () { 
+	setTimeout(function () {
 		alert("LA NAVE HA EXPLOTADO, HAS FALLADO!!\nHAZ CLICK EN LA PANTALLA PARA REINICIAR...")
-	}, 100);	
-	document.onclick = function() { window.location.reload(); }
+	}, 100);
+	document.onclick = function () { window.location.reload(); }
 }

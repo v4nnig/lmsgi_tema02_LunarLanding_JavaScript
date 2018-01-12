@@ -88,6 +88,13 @@ section a {
     color: rgb(244, 214, 176);
 }
 
+#howto li {
+    text-align: left;
+    padding: 10px;
+    margin-left: 40px;
+    font-style: italic;
+}
+
 #suelo {
     background-image: url("../img/suelo.jpg");
     /* (i) imagen creada por mi utilizando Adobe Illustrator*/
@@ -165,7 +172,20 @@ figure #sombra {
         top: 15px;
     }
     /* Contenido */
-    section {
+
+    #dificultad {
+        z-index: 3000;
+        position: fixed;
+        left: 50%;
+        height: 100px;
+        width: 300px;
+        -webkit-transform: translate(-50%, 0);
+        text-align: center;
+        color: white;
+        background-color: black;
+        border: 1px solid white;
+    }
+    section #pages {
         z-index: 200;
         width: 100%;
         height: 100%;
@@ -173,7 +193,7 @@ figure #sombra {
         background-color: rgba(0, 0, 0, 0.8);
         font-size: 0.8em;
     }
-    article {
+    #pages article {
         /* (?) buscar forma de poner un recuardo en el centro que sea semi transparente y que contenga los textos */
         color: white;
         height: 200px;
@@ -304,7 +324,22 @@ figure #sombra {
         /* (/i) 
     } */
     /* Contenido */
-    section {
+
+    
+    #dificultad {
+        z-index: 3000;
+        position: fixed;
+        left: 50%;
+        height: 100px;
+        width: 90%;
+        -webkit-transform: translate(-50%, 0);
+        text-align: center;
+        color: white;
+        background-color: black;
+        border: 1px solid white;
+    }
+
+    section #pages {
         z-index: 200;
         width: 100%;
         height: 100%;
@@ -312,7 +347,7 @@ figure #sombra {
         background-color: rgba(0, 0, 0, 0.8);
         font-size: 0.6em;
     }
-    article {
+    #pages article {
         color: white;
         height: 200px;
         padding: 10px;
@@ -422,4 +457,8 @@ footer {
 footer p {
     text-align: center;
     background-color: rgb(244, 214, 176);
+}
+
+footer a {
+    color: black;
 }
