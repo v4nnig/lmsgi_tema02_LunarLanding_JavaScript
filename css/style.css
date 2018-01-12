@@ -196,9 +196,11 @@ figure #sombra {
     #pages article {
         /* (?) buscar forma de poner un recuardo en el centro que sea semi transparente y que contenga los textos */
         color: white;
-        height: 200px;
+        height: 800px;
         padding: 10px;
-        text-align: center;
+        text-align: justify;
+        
+        background-color: black;
     }
     #hidem,
     #showm {
@@ -349,9 +351,10 @@ figure #sombra {
     }
     #pages article {
         color: white;
-        height: 200px;
+        height: 600px;
         padding: 10px;
-        text-align: center;
+        text-align: justify;
+        background-color: black;
     }
     /* menú vista movil */
     #showm {
