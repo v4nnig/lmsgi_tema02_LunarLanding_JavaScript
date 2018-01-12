@@ -107,7 +107,6 @@ function moverNave(refVarGlobal) {
 		}
 	} else {
 		stop();
-		
 		if (v < -refVarGlobal || v > refVarGlobal) {  //valor humbral he elegido 3 mt/s porque es de una dificultad intermedia
 			motorOff();
 			document.onkeydown = null;
