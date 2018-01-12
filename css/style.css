@@ -88,7 +88,13 @@ section a {
     color: rgb(244, 214, 176);
 }
 
-.leyenda {
+section h1 {
+    display: none;
+}
+
+/* leyenda de información de la página howto.html */ 
+
+.leyenda { 
     color: yellow;
     font-size: 0.7em;
 }

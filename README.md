@@ -42,27 +42,14 @@ En este proyecto he decidido cambiar varios aspectos del trabajo anterior, inclu
 
 También he modificado los iconos para hacerlos mas esteticamente atractivos y he cambiado la visualización del menú y del panel de instrumentos en el modo movil, de modo que ahora el menú se muestra oculto y solo es visualizable haciendo clic en el icono de la nave.
 
-En cambio los paneles ya no tienen iconos, en vez he creado un efecto de indicadores en forma de barra que crecen o reducen su tamaño en función de los valores del panel.
-
-
+En el panel ya no hay iconos, en vez he creado un efecto de indicadores en forma de barra que crecen o reducen su tamaño en función de los valores del panel.
 
 Para crear el trabajo he usado los siguientes recursos he imagenes:
 
 * [rocket.svg](img\borradores\rocket.svg)
     * Obtenida desde [Wikimedia](https://commons.wikimedia.org/wiki/File:Emojione_1F680.svg)
 
-En cuanto al resto de imagenes son de creación propia utilizando *Adobe illustrator*.
-
-* Quisiera explicar que también que la carpeta `img\drafts` guardan los borradores originales de las imagenes que he creado.
-
-## Uso de Sprites
----
-
-Para el trabajo he usado dos archivos de sprites los cuales he usado para el menú de navegación y panel de instrumentos de la nave.
-
-los archivos se encuentran en `img\estados.png` e `img\botones.png`.
-
-Durante el desarrollo del proyecto me he encontrado con un problema que no he sabido resolver aún, mi intención era la de utilizar las imagenes de fondo también como sprites, pero me no he encontrado forma posible de hacerlo, debido a que por ejemplo en el caso del archivo del fondo de la página que corresponde al [cielo de estrellas](img/cieloestrellado.png), si uso un sprite de algúna forma se repiten el resto de imagenes y solo he podido resumirlo usando solo una imagen como textura que repito en el fondo.
+En cuanto al resto de imagenes son de creación propia utilizando *Adobe illustrator* cuyos originales se encuentran en la carpeta `img\drafts`.
 
 
 ## Información final de validación y previsualización.
