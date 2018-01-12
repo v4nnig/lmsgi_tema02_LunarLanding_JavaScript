@@ -135,10 +135,10 @@ figure #nave {
     background-size: cover;
     width: 72px;
     height: 119px;
-    -webkit-transform: translate(-50%, 0);
+    /* -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0); */
     transform: translate(-50%, 0);
     background-position: -0px 0px;
 }
@@ -146,10 +146,10 @@ figure #nave {
 figure #sombra {
     position: absolute;
     left: 50%;
-    -webkit-transform: translate(-50%, 0);
+    /* -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
     -ms-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0); */
     transform: translate(-50%, 0);
     background-size: cover;
     bottom: -100px;
@@ -198,10 +198,10 @@ figure #sombra {
         left: 50%;
         height: 100px;
         width: 300px;
-        -webkit-transform: translate(-50%, 0);
+        /* -webkit-transform: translate(-50%, 0);
         -moz-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
-        -o-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0); */
         transform: translate(-50%, 0);
         text-align: center;
         color: white;
@@ -354,10 +354,10 @@ figure #sombra {
         left: 50%;
         height: 100px;
         width: 90%;
-        -webkit-transform: translate(-50%, 0);
+        /* -webkit-transform: translate(-50%, 0);
         -moz-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
-        -o-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0); */
         transform: translate(-50%, 0);
         text-align: center;
         color: white;
