@@ -92,7 +92,7 @@ function moverNave(refVarGlobal) {
 
 
     y += v * dt;
-    document.getElementsByClassName("height")[0].childNodes[1].innerHTML = Math.round(y);	//mover hasta que top sea un 70% de la pantalla
+    document.getElementsByClassName("height")[0].childNodes[1].innerHTML = Math.round(y); //mover hasta que top sea un 70% de la pantalla
     if (window.matchMedia("(min-width: 600px)").matches) {
         document.getElementsByClassName("height")[0].childNodes[1].style.width = Math.round(y) + "%";
     } else {

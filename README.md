@@ -18,6 +18,10 @@ En cuanto al resto de imagenes son de creación propia utilizando *Adobe illustr
 
 Validación HTML en [validator.w3.org](https://validator.w3.org/nu/?doc=https%3A%2F%2Frawgit.com%2Fv4nnig%2Flmsgi_tema02_LunarLanding_JavaScript%2Fmaster%2Findex.html).
 
+Validación de CSS [jigsaw.w3.org](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Frawgit.com%2Fv4nnig%2Flmsgi_tema02_LunarLanding_JavaScript%2Fmaster%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=es)
+
+Validación del javascript
+
 Proyecto visible en [rawgit](https://rawgit.com/v4nnig/lmsgi_tema02_LunarLanding_JavaScript/master/index.html).
 
 Para ir a la rama con los css minificados ir a: [https://github.com/v4nnig/lmsgi_tema02_LunarLanding_HTMLyCSS/tree/minificando](https://github.com/v4nnig/lmsgi_tema02_LunarLanding_HTMLyCSS/tree/minificando)
