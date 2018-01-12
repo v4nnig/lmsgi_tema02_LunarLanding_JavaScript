@@ -6,6 +6,7 @@ var dt = 0.016683;
 var timer = null;
 var timerFuel = null;
 var fuel = 100;
+var fuelDeposit = 0;
 var difficulty = null;
 var easy = 6;
 var mid = 4;
