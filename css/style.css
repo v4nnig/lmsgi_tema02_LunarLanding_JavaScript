@@ -92,9 +92,10 @@ section h1 {
     display: none;
 }
 
-/* leyenda de información de la página howto.html */ 
 
-.leyenda { 
+/* leyenda de información de la página howto.html */
+
+.leyenda {
     color: yellow;
     font-size: 0.7em;
 }
@@ -135,6 +136,10 @@ figure #nave {
     width: 72px;
     height: 119px;
     -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     background-position: -0px 0px;
 }
 
@@ -142,6 +147,10 @@ figure #sombra {
     position: absolute;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     background-size: cover;
     bottom: -100px;
     width: 72px;
@@ -183,7 +192,6 @@ figure #sombra {
         top: 15px;
     }
     /* Contenido */
-
     #dificultad {
         z-index: 3000;
         position: fixed;
@@ -191,6 +199,10 @@ figure #sombra {
         height: 100px;
         width: 300px;
         -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
         text-align: center;
         color: white;
         background-color: black;
@@ -207,7 +219,7 @@ figure #sombra {
     #pages article {
         /* (?) buscar forma de poner un recuardo en el centro que sea semi transparente y que contenga los textos */
         color: white;
-        height: 800px;
+        height: 100%;
         padding: 10px;
         text-align: justify;
         background-color: black;
@@ -336,8 +348,6 @@ figure #sombra {
         /* (/i) 
     } */
     /* Contenido */
-
-    
     #dificultad {
         z-index: 3000;
         position: fixed;
@@ -345,12 +355,15 @@ figure #sombra {
         height: 100px;
         width: 90%;
         -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
         text-align: center;
         color: white;
         background-color: black;
         border: 1px solid white;
     }
-
     section#pages {
         z-index: 200;
         width: 100%;
