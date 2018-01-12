@@ -15,7 +15,6 @@ En cuanto al resto de imagenes son de creación propia utilizando *Adobe illustr
 
 
 ## Información final de validación y previsualización.
----
 
 Validación HTML en [validator.w3.org](https://validator.w3.org/nu/?doc=https%3A%2F%2Frawgit.com%2Fv4nnig%2Flmsgi_tema02_LunarLanding_JavaScript%2Fmaster%2Findex.html).
 
