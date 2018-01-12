@@ -8,9 +8,9 @@ var timerFuel = null;
 var fuel = 100;
 var fuelDeposit = 0;
 var difficulty = null;
-var easy = 6;
-var mid = 4;
-var hard = 2;
+var easy = 5;
+var mid = 3;
+var hard = 1;
 //al cargar por completo la página...
 window.onload = function () {
 	//definición de eventos
