@@ -6,7 +6,6 @@ var dt = 0.016683;
 var timer = null;
 var timerFuel = null;
 var fuel = 100;
-var begin = false;
 var difficulty = null;
 var easy = 6;
 var mid = 4;
@@ -20,12 +19,12 @@ window.onload = function () {
 		document.getElementsByClassName("menu")[0].style.display = "block";
 		stop();
 		document.getElementById("iniciar").style.display = "none";
-	}
+	};
 	//ocultar menú móvil
 	document.getElementById("hidem").onclick = function () {
 		document.getElementsByClassName("menu")[0].style.display = "none";
 		start();
-	}
+	};
 
 	document.getElementById("iniciar").onclick = function () {
 		var op = document.forms[0];
@@ -36,7 +35,7 @@ window.onload = function () {
 				difficulty = i;
 			}
 		}
-		if (difficulty != null) {
+		if (difficulty !== null) {
 			alert("Ha seleccionado el nivel " + op[difficulty].value);
 			document.getElementById("iniciar").style.display = "none";
 
@@ -57,7 +56,7 @@ window.onload = function () {
 				} else {
 					motorOff();
 				}
-			}
+			};
 			//encender/apagar al apretar/soltar una tecla
 			document.onkeydown = motorOn;
 			document.onkeyup = motorOff;
@@ -66,9 +65,9 @@ window.onload = function () {
 			start(difficulty);
 
 		}
-	}
+	};
 
-}
+};
 
 
 // Definición de funciones
@@ -103,7 +102,7 @@ function moverNave(refVarGlobal) {
 		if (y > 100) { // altura máxima
 			stop();
 			alert(":( NO HAS CUMPLIDO LA MISION..\nHAZ CLICK EN LA PANTALLA PARA VOLVER A INICIAR");
-			document.onclick = function () { window.location.reload(); }
+			document.onclick = function () { window.location.reload(); };
 		}
 	} else {
 		stop();
@@ -118,13 +117,13 @@ function moverNave(refVarGlobal) {
 			document.onkeydown = null;
 			document.onkeyup = null;
 			alert(":) FELICIDADES HAZ ATERRIZADO A SALVO!!!\nHAZ CLICK EN LA PANTALLA PARA REINICIAR...");
-			document.onclick = function () { window.location.reload(); }
+			document.onclick = function () { window.location.reload(); };
 		}
 	}
 }
 function motorOn() {
 	a = -g;
-	if (timerFuel == null)
+	if (timerFuel === null)
 		timerFuel = setInterval(function () { actualizarAltura(); }, 10);
 	// document.getElementById("nave").style.backgroundImage = "url('../img/cohetesp.png')";
 	document.getElementById("nave").style.backgroundPosition = "-72px 0px";
@@ -160,7 +159,7 @@ function shipExplode() {
 	// document.getElementById("nave").style.backgroundImage = "url('../img/cohetesp.png')";
 	document.getElementById("nave").style.backgroundPosition = "-144px 0px";
 	setTimeout(function () {
-		alert("LA NAVE HA EXPLOTADO, HAS FALLADO!!\nHAZ CLICK EN LA PANTALLA PARA REINICIAR...")
+		alert("LA NAVE HA EXPLOTADO, HAS FALLADO!!\nHAZ CLICK EN LA PANTALLA PARA REINICIAR...");
 	}, 100);
-	document.onclick = function () { window.location.reload(); }
+	document.onclick = function () { window.location.reload(); };
 }
