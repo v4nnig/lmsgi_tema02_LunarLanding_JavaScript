@@ -125,9 +125,9 @@ function moverNave(refVarGlobal) {
 }
 function motorOn() {
     a = -g;
-    if (timerFuel === null)
+    if (timerFuel === null) 
         timerFuel = setInterval(function () { actualizarAltura(); }, 10);
-    document.getElementById("nave").style.backgroundPosition = "-72px 0px";
+    
 }
 function motorOff() {
     a = g;
@@ -137,8 +137,10 @@ function motorOff() {
 }
 
 function actualizarAltura() {
-    //Aquí hay que cambiar el valor del marcador de Fuel...
+    // Se enciende el cohete
+    document.getElementById("nave").style.backgroundPosition = "-72px 0px";
 
+    // Se cambia el valor del marcador de combustible
     document.getElementsByClassName("fuel")[0].childNodes[1].innerHTML = Math.round(fuel);
     if (window.matchMedia("(min-width: 600px)").matches) {
         document.getElementsByClassName("fuel")[0].childNodes[1].style.width = Math.round(fuel) + "%";
